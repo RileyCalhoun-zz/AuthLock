@@ -17,7 +17,7 @@ If you experience any issues with AuthLock, submit an Issue on our [GitHub](http
 * Designed with simplicity in mind. It just works.
 * Configurable messages and prefix.
 * In-game QR display using maps.
-* Support for flat file configuration
+* Support for flat-file configuration
 * Ability to force 2FA for players \(or just Staff\)
-* Disables player movement, block breaking, chat, inventory changes.
+* Disables player movement, block breaking, chat,  and inventory changes before you authenticate.
 
