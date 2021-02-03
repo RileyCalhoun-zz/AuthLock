@@ -123,8 +123,8 @@ public class PlayerListener implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void onInventoryClick(InventoryClickEvent event) {
-        if (event.getInventory().getTitle() != null && event.getInventory().getTitle().startsWith("MC2FA") && mc2FA.getAuthHandler().needsToAuthenticate(event.getWhoClicked().getUniqueId()) && mc2FA.getAuthHandler().hasGUIOpen(event.getWhoClicked().getUniqueId())) {
-            if (event.getCurrentItem() != null && event.getCurrentItem().getType() == Material.STAINED_GLASS_PANE && event.getCurrentItem().hasItemMeta() && event.getCurrentItem().getItemMeta().hasDisplayName()) {
+        if (event.getView().getTitle().startsWith("MC2FA") && mc2FA.getAuthHandler().needsToAuthenticate(event.getWhoClicked().getUniqueId()) && mc2FA.getAuthHandler().hasGUIOpen(event.getWhoClicked().getUniqueId())) {
+            if (event.getCurrentItem() != null && event.getCurrentItem().getType() == Material.GREEN_STAINED_GLASS_PANE && event.getCurrentItem().hasItemMeta() && event.getCurrentItem().getItemMeta().hasDisplayName()) {
                 int num = Integer.parseInt(ChatColor.stripColor(event.getCurrentItem().getItemMeta().getDisplayName()));
                 mc2FA.getAuthHandler().enterNumGUI((Player) event.getWhoClicked(), num);
                 mc2FA.getAuthHandler().open2FAGUI((Player) event.getWhoClicked());
