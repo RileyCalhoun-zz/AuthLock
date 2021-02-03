@@ -1,24 +1,22 @@
-# MC2FA
-MC2FA is a **free** two-factor authentication plugin for Bukkit, Spigot & BungeeCord.
-
-## Development Build
-[![CircleCI](https://circleci.com/gh/ConnorLinfoot/MC2FA/tree/master.svg?style=svg)](https://api.connorlinfoot.com/v1/ci/artifact/MC2FA/latest/download)
+# AuthLock
+AuthLock is a **free** two-factor authentication plugin for Bukkit, Spigot & BungeeCord (coming soon). Forked from ConnorLinfoot.
 
 ## Features
 - Designed to work out of the box. Just copy the plugin into your plugins folder and restart your server.
-- Custom messages and prefix.
+- Customizable messages and prefix.
 - In-game QR display using maps.
-- Supports flat file, SQLite or MySQL for key storage. (SQLite and MySQL coming soon)
-- Ability to force 2FA for players (or just OP)
-- Disables tasks such as player movement, block breaking, chat, inventory changes etc.
+- Support flat file (YAML), SQLite, or MySQL for key storage. (SQLite and MySQL coming soon)
+- Ability to require 2FA for all players. (Or just staff)
+- Disables tasks before authentication. (Tasks include: player movement, block breaking, chat, etc.)
 
 ## Planned
-- BungeeCord support
+- BungeeCord & Multi-Bungee support
 - MySQL support
 - Fallback key, allow players to be given a backup key in the case that they lose their 2FA device
 - Admin commands, allow staff to view players with 2FA and disable if needed
 - Auto-allow if on the same IP within a certain time (option)
+- Support for 1.8+
 
 ## Requirements
-- Bukkit/Spigot 1.8+
+- Spigot 1.16.5
 - Java 8+
