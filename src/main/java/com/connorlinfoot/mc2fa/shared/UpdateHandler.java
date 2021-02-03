@@ -28,7 +28,7 @@ public class UpdateHandler {
 
     public UpdateHandler(boolean enabled, String currentVersion) {
         this.enabled = enabled;
-        this.currentVersion = currentVersion;
+        this.currentVersion = "0";
         if (!enabled)
             this.updateResult = UpdateResult.DISABLED;
     }
@@ -38,30 +38,30 @@ public class UpdateHandler {
     }
 
     public void checkForUpdate() {
-        String data = null;
-        try {
-            data = doCurl(update_url);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        JSONParser jsonParser = new JSONParser();
-        try {
-            JSONObject obj = (JSONObject) jsonParser.parse(data);
-            if (obj.get("version") != null) {
-                newestVersion = obj.get("version").toString();
-                if (Integer.parseInt(newestVersion.replace(".", "")) > Integer.parseInt(currentVersion.replace(".", ""))) {
-                    updateResult = UpdateResult.UPDATE_AVAILABLE;
-                } else {
-                    updateResult = UpdateResult.NO_UPDATE;
-                }
-
-                if (obj.containsKey("message")) {
-                    message = obj.get("message").toString();
-                }
-            }
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+//        String data = null;
+//        try {
+//            data = doCurl(update_url);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//        JSONParser jsonParser = new JSONParser();
+//        try {
+//            JSONObject obj = (JSONObject) jsonParser.parse(data);
+//            if (obj.get("version") != null) {
+//                newestVersion = "0";
+//                if (Integer.parseInt(newestVersion.replace(".", "")) > Integer.parseInt(currentVersion.replace(".", ""))) {
+//                    updateResult = UpdateResult.UPDATE_AVAILABLE;
+//                } else {
+//                    updateResult = UpdateResult.NO_UPDATE;
+//                }
+//
+//                if (obj.containsKey("message")) {
+//                    message = obj.get("message").toString();
+//                }
+//            }
+//        } catch (ParseException e) {
+//            e.printStackTrace();
+//        }
     }
 
     private String doCurl(String urlString) throws IOException {

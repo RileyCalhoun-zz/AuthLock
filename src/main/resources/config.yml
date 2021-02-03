@@ -10,13 +10,10 @@ Forced: false
 Disable Commands: true
 
 # If the above is true you can whitelist commands with the below
-Whitelisted Commands:
-  - "help"
+Whitelisted Commands: []
 
 # If commands are not disabled you can use the below to blacklist specific commands instead
-Blacklisted Commands:
-  - "op"
-  - "spawn"
+Blacklisted Commands: []
 
 # Advise of 2FA - Whether to send a message to players on join notifying them that 2FA is available.
 Advise: true
@@ -25,7 +22,7 @@ Advise: true
 GUI Keypad: true
 
 # OTP label - Label that is shown in the two-factor application
-OTP Label: "%%name%%:MC2FA"
+OTP Label: "%%name%%:2FA-MC"
 
 # Key storage, either FLAT, SQLite or MYSQL - SQLite and MySQL are not yet supported and are planned for the future
 Key Storage: FLAT

@@ -61,7 +61,7 @@ public class AuthHandler extends com.connorlinfoot.mc2fa.shared.AuthHandler {
                     try {
                         ImageRenderer renderer = new ImageRenderer(url);
                         view.addRenderer(renderer);
-                        ItemStack mapItem = new ItemStack(Material.MAP, 1, view.getId());
+                        ItemStack mapItem = new ItemStack(Material.MAP, 1);
                         ItemMeta mapMeta = mapItem.getItemMeta();
                         mapMeta.setDisplayName(ChatColor.GOLD + "QR Code");
                         mapItem.setItemMeta(mapMeta);
@@ -126,7 +126,7 @@ public class AuthHandler extends com.connorlinfoot.mc2fa.shared.AuthHandler {
             if (no == 10) {
                 no = 0;
             }
-            ItemStack itemStack = new ItemStack(Material.STAINED_GLASS_PANE, no, (short) 13);
+            ItemStack itemStack = new ItemStack(Material.GREEN_STAINED_GLASS_PANE, no);
             ItemMeta itemMeta = itemStack.getItemMeta();
             itemMeta.setDisplayName(ChatColor.WHITE + "" + no);
             itemStack.setItemMeta(itemMeta);
