@@ -22,19 +22,41 @@ public class FlatStorage extends StorageHandler {
     }
 
     public String getKey(UUID uuid) {
-        if (configuration.isSet(uuid.toString() + ".Key")) {
-            return configuration.getString(uuid.toString() + ".Key");
+        if (configuration.isSet(uuid.toString() + ".key")) {
+            return configuration.getString(uuid.toString() + ".key");
         }
+
         return null;
     }
 
     public void setKey(UUID uuid, String key) {
-        configuration.set(uuid.toString() + ".Key", key);
+        configuration.set(uuid.toString() + ".key", key);
         save();
     }
 
     public void removeKey(UUID uuid) {
-        configuration.set(uuid.toString() + ".Key", null);
+        configuration.set(uuid.toString() + ".key", null);
+        save();
+    }
+
+    @Override
+    public String getBackupKey(UUID uuid) {
+        if (configuration.isSet(uuid.toString() + ".backup-key")) {
+            return configuration.getString(uuid.toString() + ".backup-key");
+        }
+
+        return null;
+    }
+
+    @Override
+    public void setBackupKey(UUID uuid, String backupKey) {
+        configuration.set(uuid.toString() + ".backup-key", backupKey);
+        save();
+    }
+
+    @Override
+    public void removeBackupKey(UUID uuid) {
+        configuration.set(uuid.toString() + ".backup-key", null);
         save();
     }
 

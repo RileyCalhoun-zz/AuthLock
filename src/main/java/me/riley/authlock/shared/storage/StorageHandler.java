@@ -10,4 +10,12 @@ public abstract class StorageHandler {
 
     public abstract void removeKey(UUID uuid);
 
+    public abstract String getBackupKey(UUID uuid);
+
+    public abstract void setBackupKey(UUID uuid, String backupKey);
+
+    public abstract void removeBackupKey(UUID uuid);
+
+
+
 }

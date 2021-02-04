@@ -94,7 +94,7 @@ public class AuthHandler extends me.riley.authlock.shared.AuthHandler {
     }
 
     public void open2FAGUI(Player player) {
-        String title = "MC2FA";
+        String title = "AuthLock";
         if (currentGUIKeys.containsKey(player.getUniqueId()) && currentGUIKeys.get(player.getUniqueId()).length() > 0) {
             if (currentGUIKeys.get(player.getUniqueId()).length() == 6) {
                 boolean isValid = validateKey(player.getUniqueId(), Integer.valueOf(currentGUIKeys.get(player.getUniqueId())));

@@ -5,13 +5,36 @@ import com.warrenstrange.googleauth.GoogleAuthenticator;
 import com.warrenstrange.googleauth.GoogleAuthenticatorKey;
 
 import java.util.HashMap;
+import java.util.Random;
 import java.util.UUID;
 
 public abstract class AuthHandler {
+
     protected StorageHandler storageHandler;
     protected HashMap<UUID, AuthState> authStates = new HashMap<>();
     private HashMap<UUID, String> pendingKeys = new HashMap<>();
+    private HashMap<UUID, String> backupKeys = new HashMap<>();
 
+    // Backup Keys
+    public String generateBackupKey() {
+        String key = "" + new Random().nextInt(9)
+                + new Random().nextInt(9)
+                + new Random().nextInt(9)
+                + new Random().nextInt(9)
+                + new Random().nextInt(9)
+                + new Random().nextInt(9)
+                + new Random().nextInt(9)
+                + new Random().nextInt(9);
+
+        return key;
+    }
+
+    public void createBackupKey(UUID uuid) {
+        String key = generateBackupKey();
+        backupKeys.put(uuid, key);
+    }
+
+    // Google Authentication Services
     public enum AuthState {
         LOADING, DISABLED, PENDING_SETUP, PENDING_LOGIN, AUTHENTICATED
     }
