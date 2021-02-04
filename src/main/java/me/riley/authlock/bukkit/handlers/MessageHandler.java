@@ -1,6 +1,6 @@
-package com.connorlinfoot.mc2fa.bukkit.handlers;
+package me.riley.authlock.bukkit.handlers;
 
-import com.connorlinfoot.mc2fa.bukkit.MC2FA;
+import me.riley.authlock.bukkit.AuthLock;
 import org.bukkit.ChatColor;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
@@ -8,11 +8,11 @@ import org.bukkit.entity.Player;
 import java.io.File;
 import java.io.IOException;
 
-public class MessageHandler extends com.connorlinfoot.mc2fa.shared.MessageHandler {
-    private MC2FA mc2FA;
+public class MessageHandler extends me.riley.authlock.shared.MessageHandler {
+    private AuthLock mc2FA;
     private YamlConfiguration messagesConfig;
 
-    public MessageHandler(MC2FA mc2FA) {
+    public MessageHandler(AuthLock mc2FA) {
         this.mc2FA = mc2FA;
         loadConfiguration();
     }
@@ -50,7 +50,7 @@ public class MessageHandler extends com.connorlinfoot.mc2fa.shared.MessageHandle
         messagesConfig = YamlConfiguration.loadConfiguration(messagesFile);
 
         if (!messagesConfig.isSet("Prefix")) {
-            messagesConfig.set("Prefix", "&7[&bMC2FA&7]");
+            messagesConfig.set("Prefix", "&7[&cAuthHandler&7]");
         }
 
         for (String message : getDefaults()) {

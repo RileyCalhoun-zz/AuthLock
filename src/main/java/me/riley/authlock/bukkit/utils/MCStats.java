@@ -25,7 +25,7 @@
  * authors and contributors and should not be interpreted as representing official policies,
  * either expressed or implied, of anybody else.
  */
-package com.connorlinfoot.mc2fa.bukkit.utils;
+package me.riley.authlock.bukkit.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Server;

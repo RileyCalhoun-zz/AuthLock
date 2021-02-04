@@ -1,9 +1,9 @@
-package com.connorlinfoot.mc2fa.bukkit.handlers;
+package me.riley.authlock.bukkit.handlers;
 
-import com.connorlinfoot.mc2fa.bukkit.MC2FA;
-import com.connorlinfoot.mc2fa.bukkit.events.PlayerStateChangeEvent;
-import com.connorlinfoot.mc2fa.bukkit.storage.FlatStorage;
-import com.connorlinfoot.mc2fa.bukkit.utils.ImageRenderer;
+import me.riley.authlock.bukkit.AuthLock;
+import me.riley.authlock.bukkit.events.PlayerStateChangeEvent;
+import me.riley.authlock.bukkit.storage.FlatStorage;
+import me.riley.authlock.bukkit.utils.ImageRenderer;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.UUID;
 
-public class AuthHandler extends com.connorlinfoot.mc2fa.shared.AuthHandler {
-    private MC2FA mc2FA;
+public class AuthHandler extends me.riley.authlock.shared.AuthHandler {
+    private AuthLock mc2FA;
     private ArrayList<UUID> openGUIs = new ArrayList<>();
     private HashMap<UUID, String> currentGUIKeys = new HashMap<>();
 
-    public AuthHandler(MC2FA mc2FA) {
+    public AuthHandler(AuthLock mc2FA) {
         this.mc2FA = mc2FA;
         switch (mc2FA.getConfigHandler().getKeyStorage()) {
             default:
@@ -44,7 +44,7 @@ public class AuthHandler extends com.connorlinfoot.mc2fa.shared.AuthHandler {
         Bukkit.getServer().dispatchCommand(Bukkit.getConsoleSender(), "tellraw " + player.getName() + " {\"text\":\"\",\"extra\":[{\"text\":\"%%message%%\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"%%url%%\"}}]}".replaceAll("%%message%%", message).replaceAll("%%url%%", url));
     }
 
-    public void giveQRItem(MC2FA mc2FA, Player player) {
+    public void giveQRItem(AuthLock mc2FA, Player player) {
         String url = getQRCodeURL(mc2FA.getConfigHandler().getQrCodeURL(), player.getUniqueId());
         final MessageHandler messageHandler = mc2FA.getMessageHandler();
         if (player.getInventory().firstEmpty() < 0) {

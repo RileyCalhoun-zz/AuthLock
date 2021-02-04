@@ -1,6 +1,6 @@
-package com.connorlinfoot.mc2fa.bukkit.handlers;
+package me.riley.authlock.bukkit.handlers;
 
-import com.connorlinfoot.mc2fa.bukkit.MC2FA;
+import me.riley.authlock.bukkit.AuthLock;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 
@@ -27,7 +27,7 @@ public class ConfigHandler {
         TRUE, FALSE, OP
     }
 
-    public ConfigHandler(MC2FA mc2FA) {
+    public ConfigHandler(AuthLock mc2FA) {
         FileConfiguration config = mc2FA.getConfig();
 
         if (config.isSet("Debug"))

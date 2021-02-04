@@ -1,6 +1,6 @@
-package com.connorlinfoot.mc2fa.bukkit.events;
+package me.riley.authlock.bukkit.events;
 
-import com.connorlinfoot.mc2fa.shared.AuthHandler;
+import me.riley.authlock.shared.AuthHandler;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Cancellable;
 import org.bukkit.event.Event;

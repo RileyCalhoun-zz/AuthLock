@@ -1,12 +1,12 @@
-package com.connorlinfoot.mc2fa.bukkit;
+package me.riley.authlock.bukkit;
 
-import com.connorlinfoot.mc2fa.bukkit.handlers.AuthHandler;
-import com.connorlinfoot.mc2fa.bukkit.handlers.CommandHandler;
-import com.connorlinfoot.mc2fa.bukkit.handlers.ConfigHandler;
-import com.connorlinfoot.mc2fa.bukkit.handlers.MessageHandler;
-import com.connorlinfoot.mc2fa.bukkit.listeners.PlayerListener;
-import com.connorlinfoot.mc2fa.bukkit.utils.MCStats;
-import com.connorlinfoot.mc2fa.shared.UpdateHandler;
+import me.riley.authlock.bukkit.handlers.AuthHandler;
+import me.riley.authlock.bukkit.handlers.CommandHandler;
+import me.riley.authlock.bukkit.handlers.ConfigHandler;
+import me.riley.authlock.bukkit.handlers.MessageHandler;
+import me.riley.authlock.bukkit.listeners.PlayerListener;
+import me.riley.authlock.bukkit.utils.MCStats;
+import me.riley.authlock.shared.UpdateHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
@@ -14,7 +14,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.IOException;
 
-public class MC2FA extends JavaPlugin {
+public class AuthLock extends JavaPlugin {
     private boolean updateAvailable = false;
     private String updateMessage = "";
     private String pluginMessage = null;

@@ -1,7 +1,7 @@
-package com.connorlinfoot.mc2fa.bukkit.handlers;
+package me.riley.authlock.bukkit.handlers;
 
-import com.connorlinfoot.mc2fa.bukkit.MC2FA;
-import com.connorlinfoot.mc2fa.shared.AuthHandler;
+import me.riley.authlock.bukkit.AuthLock;
+import me.riley.authlock.shared.AuthHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -10,9 +10,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 
 public class CommandHandler implements CommandExecutor {
-    private MC2FA mc2FA;
+    private AuthLock mc2FA;
 
-    public CommandHandler(MC2FA mc2FA) {
+    public CommandHandler(AuthLock mc2FA) {
         this.mc2FA = mc2FA;
     }
 

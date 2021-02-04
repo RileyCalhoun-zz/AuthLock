@@ -1,10 +1,10 @@
-package com.connorlinfoot.mc2fa.shared;
+package me.riley.authlock.shared;
 
 import java.util.Arrays;
 import java.util.List;
 
 public abstract class MessageHandler {
-    private String prefix = "&7[&bMC2FA&7]&r ";
+    private String prefix = "&7[&cAuthLock&7]&r ";
     private List<String> defaults = Arrays.asList(
             "&cPlease validate your account with two-factor authentication",
             "&cThe key you entered was not valid, please try again",

@@ -1,6 +1,6 @@
-package com.connorlinfoot.mc2fa.shared;
+package me.riley.authlock.shared;
 
-import com.connorlinfoot.mc2fa.shared.storage.StorageHandler;
+import me.riley.authlock.shared.storage.StorageHandler;
 import com.warrenstrange.googleauth.GoogleAuthenticator;
 import com.warrenstrange.googleauth.GoogleAuthenticatorKey;
 

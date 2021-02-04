@@ -1,4 +1,4 @@
-package com.connorlinfoot.mc2fa.shared.utils;
+package me.riley.authlock.shared.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;

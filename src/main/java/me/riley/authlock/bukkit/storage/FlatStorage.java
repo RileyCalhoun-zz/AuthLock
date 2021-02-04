@@ -1,6 +1,6 @@
-package com.connorlinfoot.mc2fa.bukkit.storage;
+package me.riley.authlock.bukkit.storage;
 
-import com.connorlinfoot.mc2fa.shared.storage.StorageHandler;
+import me.riley.authlock.shared.storage.StorageHandler;
 import org.bukkit.configuration.file.YamlConfiguration;
 
 import java.io.File;

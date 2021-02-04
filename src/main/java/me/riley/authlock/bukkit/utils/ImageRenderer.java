@@ -1,4 +1,4 @@
-package com.connorlinfoot.mc2fa.bukkit.utils;
+package me.riley.authlock.bukkit.utils;
 
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;

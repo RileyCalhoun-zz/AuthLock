@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.connorlinfoot</groupId>
-    <artifactId>MC2FA</artifactId>
-    <version>0.2.0-SNAPSHOT</version>
+    <groupId>me.riley</groupId>
+    <artifactId>AuthLock</artifactId>
+    <version>1.0</version>
 
     <build>
         <defaultGoal>clean package install</defaultGoal>
-        <finalName>MC2FA-${project.version}</finalName>
+        <finalName>AuthLock-${project.version}</finalName>
         <sourceDirectory>${basedir}/src/main/java</sourceDirectory>
         <resources>
             <resource>

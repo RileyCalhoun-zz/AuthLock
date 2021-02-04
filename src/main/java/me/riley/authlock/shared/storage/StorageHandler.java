@@ -1,4 +1,4 @@
-package com.connorlinfoot.mc2fa.shared.storage;
+package me.riley.authlock.shared.storage;
 
 import java.util.UUID;
 

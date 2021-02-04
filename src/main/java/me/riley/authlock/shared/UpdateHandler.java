@@ -1,8 +1,4 @@
-package com.connorlinfoot.mc2fa.shared;
-
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
+package me.riley.authlock.shared;
 
 import java.io.DataInputStream;
 import java.io.DataOutputStream;

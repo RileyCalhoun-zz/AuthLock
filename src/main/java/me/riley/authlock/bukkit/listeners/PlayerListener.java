@@ -1,8 +1,8 @@
-package com.connorlinfoot.mc2fa.bukkit.listeners;
+package me.riley.authlock.bukkit.listeners;
 
-import com.connorlinfoot.mc2fa.bukkit.MC2FA;
-import com.connorlinfoot.mc2fa.bukkit.events.PlayerStateChangeEvent;
-import com.connorlinfoot.mc2fa.shared.AuthHandler;
+import me.riley.authlock.bukkit.AuthLock;
+import me.riley.authlock.bukkit.events.PlayerStateChangeEvent;
+import me.riley.authlock.shared.AuthHandler;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.ItemFrame;
@@ -20,9 +20,9 @@ import org.bukkit.event.inventory.InventoryType;
 import org.bukkit.event.player.*;
 
 public class PlayerListener implements Listener {
-    private MC2FA mc2FA;
+    private AuthLock mc2FA;
 
-    public PlayerListener(MC2FA mc2FA) {
+    public PlayerListener(AuthLock mc2FA) {
         this.mc2FA = mc2FA;
     }
 
