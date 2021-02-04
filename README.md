@@ -10,8 +10,6 @@ Installing AuthLock is very simple. It's made to work right out of the box.
 2. Drag the plugin into your plugins folder
 3. Restart your server
 
-## Building with Maven
-
 ## Features
 
 If you experience any issues with AuthLock, submit an Issue on our [GitHub](https://github.com/RileyCalhounDEV/AuthLock).
@@ -29,5 +27,5 @@ Building the project files with maven is a pretty straight forward process as lo
 1. Download the project's source code
 2. Start a powershell terminal in the folder
 3. Type "mvn package" and press enter
-### The build will not complete. It will say "build failed" but the jar will still export to the target folder. A fix is coming for this soon.
+#### The build will not complete. It will say "build failed" but the jar will still export to the target folder. A fix is coming for this soon.
 
