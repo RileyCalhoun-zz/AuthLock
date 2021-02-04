@@ -4,7 +4,7 @@ AuthLock is a free two-factor authentication plugin for Bukkit, Spigot & BungeeC
 
 ## Installing AuthLock
 
-Installing AuthLock is a very simple. It's made to work right out of the box.
+Installing AuthLock is very simple. It's made to work right out of the box.
 
 1. Download the plugin from our [GitHub](https://github.com/RileyCalhounDEV/AuthLock)
 2. Drag the plugin into your plugins folder
